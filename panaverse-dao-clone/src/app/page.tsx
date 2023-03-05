@@ -1,3 +1,4 @@
+import CoreTracks from "@/components/widgets/CoreTracks";
 import Hero from "@/components/widgets/Hero";
 
 export default function Home() {
@@ -5,6 +6,8 @@ export default function Home() {
     <>
     {/* Hero section */}
     <Hero />
+    {/* Core Tracks Section */}
+    <CoreTracks />
     </>
   )
 }
