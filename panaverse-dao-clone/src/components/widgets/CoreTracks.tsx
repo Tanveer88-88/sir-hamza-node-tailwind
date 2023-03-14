@@ -40,7 +40,7 @@ const CoreTracks = () => {
           </div>
         </div>
         {/*Boxes  */}
-        <div className="my-20 flex flex-col sm:flex-row gap-x-4 max-w-screen-xl">
+        <div className="my-20 flex flex-col md:flex-row gap-x-8 gap-y-6">
           {
             CoreTracksData.map((item,i)=>{
               return(
