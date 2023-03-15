@@ -2,23 +2,25 @@ import Wraper from "@/components/shared/Wraper";
 import Button from "@/components/shared/Button";
 import QuaterBox from "@/components/shared/QuaterBox";
 
-const CoreTracksData=[
+const CoreTracksData = [
   {
-    header:"Quarter I",
-    description:"CS-101: Object-Oriented Programming using TypeScript",
-    number:1
+    header: "Quarter I",
+    description: "CS-101: Object-Oriented Programming using TypeScript",
+    number: 1,
   },
   {
-    header:"Quarter II",
-    description:"W2-201: Developing Planet-Scale Web 2.0 Serverless Cloud Cloud Apps and APIs using Next.js 13 and Cloud Development Kit (CDK) for Terraform",
-    number:2
+    header: "Quarter II",
+    description:
+      "W2-201: Developing Planet-Scale Web 2.0 Serverless Cloud Cloud Apps and APIs using Next.js 13 and Cloud Development Kit (CDK) for Terraform",
+    number: 2,
   },
   {
-    header:"Quarter III",
-    description:"$-101: Dollar Making Bootcamp - Full-Stack Template and API Product Development",
-    number:3
-  }
-]
+    header: "Quarter III",
+    description:
+      "$-101: Dollar Making Bootcamp - Full-Stack Template and API Product Development",
+    number: 3,
+  },
+];
 
 const CoreTracks = () => {
   const header = "Core Courses \n (Common in All Specializations):";
@@ -41,13 +43,15 @@ const CoreTracks = () => {
         </div>
         {/*Boxes  */}
         <div className="my-20 flex flex-col md:flex-row gap-x-8 gap-y-6">
-          {
-            CoreTracksData.map((item,i)=>{
-              return(
-                <QuaterBox {...item}/>
-              )
-            })
-          }
+          {CoreTracksData.map((item, i) => {
+            return (
+              <QuaterBox
+                description={item.description}
+                header={item.header}
+                number={i + 1}
+              />
+            );
+          })}
         </div>
       </Wraper>
     </section>
