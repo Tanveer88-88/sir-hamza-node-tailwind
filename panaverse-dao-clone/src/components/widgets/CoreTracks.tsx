@@ -45,11 +45,12 @@ const CoreTracks = () => {
         <div className="my-20 flex flex-col md:flex-row gap-x-8 gap-y-6">
           {CoreTracksData.map((item, i) => {
             return (
-              <QuaterBox
-                description={item.description}
-                header={item.header}
-                number={i + 1}
-              />
+                <QuaterBox
+                  key={item.number}
+                  description={item.description}
+                  header={item.header}
+                  number={i + 1}
+                />
             );
           })}
         </div>
